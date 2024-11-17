@@ -97,4 +97,30 @@ Verilog 的模型
 - 由下而上(Bottom-up)
 - 由上而下(Top-down)
 - 架構上類似樹狀結構
-  
+
+Verilog語法詞彙
+---
+一連串的標記(token)所組成
+- 識別字(identifiers) --> 大小寫有區別
+- 關鍵字(keywords) --> 特殊名稱 所以關鍵字都用小寫 都不能當識別字 ex : always case ...
+- 字串(strings) --> 一連串字元(character)組成 放在雙引號內
+- 註解(comments) --> 可讀性(readability) 文件化(documentation) 版權宣告(license declaration) 
+- 空白(whitespace) --> 區隔物件 除了字串內空白 註解跟空白在編譯與合成會被忽略
+- 數值(numbers)
+  - 固定長度(sized) --> 定義位元寬度
+  - 不定長度(unsized) --> 未定義
+  - 數值組(Value set) --> 0, 1, x(unknown value), z(high impedence, dloating state)
+
+Verilog資料物件及型態
+---
+- 接線(nets) --> 連接線 內定值為 z
+  - wire
+- 暫存器(register) 內定值為 x 
+  - reg
+- 純量(scalar) --> 一個位元的物件
+- 向量(vector) --> 多個位元
+  [大數字 : 小數字]、[小數字 : 大數字] --> [MSB : LSB] 兩種都可以但左邊是最高位元  
+- 陣列(array)
+  - ex : 128個32bits的暫存器 --> reg [31:0] mem_block [127:0];
+  - ex : 8bits的2D 4*64暫存器陣列 --> reh [7:0] mem_2D [3:0][0:63];  
+- 參數(parameters) --> 常數
