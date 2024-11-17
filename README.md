@@ -124,3 +124,14 @@ Verilog資料物件及型態
   - ex : 128個32bits的暫存器 --> reg [31:0] mem_block [127:0];
   - ex : 8bits的2D 4*64暫存器陣列 --> reh [7:0] mem_2D [3:0][0:63];  
 - 參數(parameters) --> 常數
+
+運算式表示
+---
+運算式(Expression)
+  - 描述訊號與其他訊號間的關係
+  - 由運算元(operand)與運算子(operator)組成
+算術運算子(Arithmetic) --> 輸入為不確定值時 結果也是不確定值
+![image](https://github.com/user-attachments/assets/b5218a19-7686-4eed-8c17-bd86ffbe4fc1)  
+少用原因合成出的店路面機會太大 有些合成器合成不出來
+位元運算子(Bit-wise) --> 兩運算元的相對應位元做邏輯運算 若兩運算元不等長 短的會補0  
+![image](https://github.com/user-attachments/assets/0c7ad778-8411-431d-b246-9731d6cad813)
