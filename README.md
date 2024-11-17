@@ -76,7 +76,7 @@ Verilog 的模型
 3. 資料處裡模型(Data Flow Model)  
    描述電路中資料的處理方式  
    資料如何在電路中運算 傳送  
-   輸入持續驅動輸出  
+   輸入持續驅動輸出(assign)  
    運算式 ex: out = a + b + c
 
 4. 行為模型(Behaviroral Model)  
