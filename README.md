@@ -79,7 +79,7 @@ Verilog 的模型
    輸入持續驅動輸出(assign)  
    運算式 ex: out = a + b + c
 
-4. 行為模型(Behaviroral Model)  
+4. 行為模型(Behavioral Model)  
    Verilog最高階的模型  
    不須考慮硬體元件特性，只須放在模組的功能描述  
    像C語言  
@@ -130,8 +130,130 @@ Verilog資料物件及型態
 運算式(Expression)
   - 描述訊號與其他訊號間的關係
   - 由運算元(operand)與運算子(operator)組成
-算術運算子(Arithmetic) --> 輸入為不確定值時 結果也是不確定值
+
+1. 算術運算子(Arithmetic) --> 輸入為不確定值時 結果也是不確定值  
 ![image](https://github.com/user-attachments/assets/b5218a19-7686-4eed-8c17-bd86ffbe4fc1)  
 少用原因合成出的店路面機會太大 有些合成器合成不出來
-位元運算子(Bit-wise) --> 兩運算元的相對應位元做邏輯運算 若兩運算元不等長 短的會補0  
+
+2. 位元運算子(Bit-wise) --> 兩運算元的相對應位元做邏輯運算 若兩運算元不等長 短的會補0  
 ![image](https://github.com/user-attachments/assets/0c7ad778-8411-431d-b246-9731d6cad813)
+
+3. 序連運算子{} --> 將不同的運算元做連結 位元數必須明確
+   
+4. 重複運算子{{}} --> 將一個運算元重複一個指定的次數
+   
+5. 相等運算子(Equality)
+  - 判斷兩位元是否相等
+  - 判斷運算式(return 1/0, 1位元)  
+![image](https://github.com/user-attachments/assets/43c33e9e-05ed-4152-b33f-c216d1cf85bc)  
+  - 邏輯上相等
+    - 運算元出現x, z回傳x
+    - 電路設計
+  - 事件上相等
+    - 較嚴謹
+    - 有x, z也會判斷
+    - 模擬驗證比對
+
+6. 關係運算子(Relational)
+  - 同C語言 比較大小
+  - 回傳1/0
+  - 有x, z回傳x
+
+7. 邏輯運算子
+  - 運算元先真偽判斷再邏輯運算
+  - 回傳1/0
+  - x表不確定
+  - ![image](https://github.com/user-attachments/assets/f194155c-b29c-43a5-b414-b76ca04c22bd)  
+ex : ![image](https://github.com/user-attachments/assets/42a025bc-5841-45fd-8635-df1db147580d)  --> 多位元訊號只要是非0就是為真
+
+8. 判斷運算子(Conditional) --> 三源運算子
+  - (判斷運算式)?(判斷運算式為真實執行的運算):(判斷運算式為假執行的運算)
+
+9. 簡化運算子(Reduction)
+  - 類似位元運算子 只需一個運算元
+  - 將一個運算元的所有位元做邏輯上的運算 最後輸出一個位元的結果
+  - ![image](https://github.com/user-attachments/assets/a0f83db7-507a-47d5-a5fb-3c1c78be4e02)
+  - ![image](https://github.com/user-attachments/assets/d0f3161c-1169-49ba-bf0b-5d7e3de6b46a)
+
+10. 移位運算子(Shift)
+  - 左移右移
+  - 向量運算元向左或向右移特定的位元數
+  - 移位產生的空位元自動補0
+  - ![image](https://github.com/user-attachments/assets/bf46db16-3b6a-43f5-b3ba-3941887bcabf)
+
+11. 其他運算子
+  - [] --> 位元或部分選擇
+  - () --> 優先運算
+
+行為模型(Behavioral Model)
+---
+程序指定(procedural assignment)
+  - 行為模型
+    - Combinational circuit
+    - Sequential circuit
+  - 關鍵字
+    - initial 、 always
+    - 區塊內數出資料(等號左邊) 只能宣告成reg
+  - 測試波形與電路驗證的描述
+
+限制指定(blocking assignment)
+- 由上而下依序執行
+- 符號：=
+
+無限制指定(nonblocking assignment)
+- 平行處理 --> 執行順序不受影響
+- 符號：<=
+
+initial  
+  - 只執行一次
+  - 以begin...end包覆
+
+always
+  - 區塊內描述永無止盡
+  - 描述電路行為
+  - 事件觸發 --> @(事件表示式)
+  - 以begin...end包覆
+
+語法
+---
+1. 條件敘述if...else if...else
+2. 多路分支敘述case...default...endcase / casex / casez
+3. 迴圈敘述forever / repeat / while --> 波型模擬驗證 / for --> 電路設計
+   - forever 通常搭配時間延遲產生週期訊號
+     ![image](https://github.com/user-attachments/assets/3e62cfcc-6bd7-4901-bacc-ed6b172494d4)  
+
+   - repeat(n) 重複n次  
+     ![image](https://github.com/user-attachments/assets/df964fa5-bd3a-4a14-ab56-2d94b8d15ad4)  
+
+   - while 重複執行到條件運算式不成立
+     ![image](https://github.com/user-attachments/assets/28218e84-f6e2-426f-bb94-12e76415ad83)  
+
+   - for(初始條件;判斷終止條件;改變控制變數的程序指定) --> 精簡程式碼 不節省硬體
+     ![image](https://github.com/user-attachments/assets/34634e85-b06f-468b-9930-c78f66d9c578)  
+4. 函數function...endfunction
+   - 重複使用程式碼
+   - 無時間延遲控制指令
+   - 至少一個輸入且回傳單一值
+   - 常用電路設計(可合成)
+   - 宣告  
+   ![image](https://github.com/user-attachments/assets/9052dfee-d42d-46d0-aacd-0acb6a489840)
+   - 呼叫(一)  
+   ![image](https://github.com/user-attachments/assets/e9d6c84e-0cc8-4285-a839-f4fcc6ced5a7)
+   - 呼叫(二)  
+   ![image](https://github.com/user-attachments/assets/077bcf9e-67d0-4ab0-9c5c-c9ff06801cdd)
+   - 合成  
+   ![image](https://github.com/user-attachments/assets/5bd35caa-c2a3-4d41-a1e0-bb4cf458336d)
+5. 任務task...endtask
+   - 類似函數
+   - 可也時間延遲指令
+   - 輸入輸出個數不定
+   - 常用模擬及驗證(不一定能合成)
+   - 宣告  
+   ![image](https://github.com/user-attachments/assets/ae13d804-0dd2-4b11-8622-97314bcfca84)
+   - 呼叫  
+   ![image](https://github.com/user-attachments/assets/40a1436d-6480-4a8b-857d-19674687f48c)
+   - 函數與任務比較
+   ![image](https://github.com/user-attachments/assets/6609d409-cec5-48d3-9e17-d206fe7784dc)
+
+
+
