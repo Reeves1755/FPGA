@@ -118,9 +118,34 @@ initial always比較
 ![image](https://github.com/user-attachments/assets/b5ea831d-6768-48c4-9b01-b9bbb01a4161)  
 ![image](https://github.com/user-attachments/assets/67816725-cfa9-4f8d-affe-b0dcc8c25d38)
 
+數位系統架構
+==
+![image](https://github.com/user-attachments/assets/ac2a75b8-83aa-46a5-905b-10cc6acea97d)
 
+有限狀態機
+==
+![image](https://github.com/user-attachments/assets/6faa14d3-2ab0-45c1-a23c-f7c573020493)  
+ex  
+![image](https://github.com/user-attachments/assets/8e864c34-66a9-4405-b999-cb6842588c6c)  
+![image](https://github.com/user-attachments/assets/52c22b01-2640-4d1e-b2a3-00d8fa6714ac)  
+推導FSM  
+![image](https://github.com/user-attachments/assets/e58142fd-4bcf-4489-8e20-60995a510d64)  
+狀態機類型  
+![image](https://github.com/user-attachments/assets/26a482f3-1b2e-4552-8735-b6d86736847a)  
+![image](https://github.com/user-attachments/assets/7dac7ba1-0f66-408c-914a-0292e4e731b0)
 
-
+資料運算單元
+==
+![image](https://github.com/user-attachments/assets/9fa0cb87-a5bb-4c46-8a0e-9b710a4fed00)  
+![image](https://github.com/user-attachments/assets/f81292d9-ca06-4d6d-ab69-160d0613fa3e)  
+基本單元  
+![image](https://github.com/user-attachments/assets/62db3f56-624b-4af6-8f82-f86ec72b9043)  
+![image](https://github.com/user-attachments/assets/81885a5f-c0b3-41c2-a33c-455f2cae5ccc)  
+![image](https://github.com/user-attachments/assets/30bd86f6-c05e-4f18-b3aa-a6bd919bdee1)  
+![image](https://github.com/user-attachments/assets/d4dc9a5b-5574-46c2-ba15-640a7c26b6c0)  
+![image](https://github.com/user-attachments/assets/96a8a564-cf51-4ced-ae3c-8f7c3376d281)  
+範例  
+![image](https://github.com/user-attachments/assets/9a176c4a-4223-41e8-8285-eaa015c0826c)  
 
 
 
