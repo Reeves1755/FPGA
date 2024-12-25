@@ -147,5 +147,51 @@ ex
 範例  
 ![image](https://github.com/user-attachments/assets/9a176c4a-4223-41e8-8285-eaa015c0826c)  
 
+1. 暫存器檔案  
+![image](https://github.com/user-attachments/assets/b1c6b271-b358-4b82-a1ac-4ade43bd3bbd)  
+![image](https://github.com/user-attachments/assets/c6b29a8c-8327-4494-92f4-5f0498d390f7)
+![image](https://github.com/user-attachments/assets/6b51d6d5-55af-49bb-b9bc-e85920c15a80)
+
+2. 記憶體  
+![image](https://github.com/user-attachments/assets/3b2f40ff-3f71-4e7f-84b6-a20108e433b1)  
+![image](https://github.com/user-attachments/assets/9155d755-bf82-4778-912e-8b8bbbeca27f)
+![image](https://github.com/user-attachments/assets/2a13adb6-9e52-4e36-afb4-20191bcb3423)
+
+資料運算單元的效能
+==
+![image](https://github.com/user-attachments/assets/58b5afa5-c25d-42a6-8ac2-c3a2f00fcacb)  
+![image](https://github.com/user-attachments/assets/07a21bca-afd7-406e-81e1-7d271a5100ab)  
+![image](https://github.com/user-attachments/assets/61d7900c-949d-4525-84ef-83a7657212c8)  
+![image](https://github.com/user-attachments/assets/87cb0cf7-0d6c-4a8d-a153-8ef0ad6fe68f)  
+![image](https://github.com/user-attachments/assets/a2783680-5f83-49e1-b4db-a7e58c23e7a2)
+
+邏輯合成原理 --> 時間限制
+==
+![image](https://github.com/user-attachments/assets/3bfb7419-76ac-4288-b55d-6f57a4bfebcb)  
+![image](https://github.com/user-attachments/assets/6ab4463a-04da-4fe5-8cd6-fd1b69ec69fe)
+
+管線化架構
+==
+![image](https://github.com/user-attachments/assets/bff33aa9-426d-41e6-9283-a2c84260549a)  
+![image](https://github.com/user-attachments/assets/4468587b-2adb-4f9f-a768-48569d7dc797)  
+![image](https://github.com/user-attachments/assets/7011d259-d122-4657-92cf-96674ef57b05)  
+![image](https://github.com/user-attachments/assets/9fe6d893-ab94-488b-b22e-917566962a5f)  
+![image](https://github.com/user-attachments/assets/20fcdb5d-ba2a-4ee9-a756-78ca31e08f59)
+![image](https://github.com/user-attachments/assets/8e59ef54-9e8a-412b-8ebe-b76233336e73)  
+![image](https://github.com/user-attachments/assets/cae5b117-424c-4697-a065-d8d0aba00f4b)
+
+數位系統設計方法
+==
+分為資料運算單元(資料運算 --> 組合邏輯 + 儲存元件)以及控制單元(整個系統的控制流程)  
+![image](https://github.com/user-attachments/assets/34bf066a-c15c-4140-a9f4-5cf15bec7625)  
+![image](https://github.com/user-attachments/assets/c08f82db-276d-462d-a87e-6949eb9c13a1)  
+![image](https://github.com/user-attachments/assets/279b90d4-fec6-4c5f-9590-6845dcc6627a)  
+![image](https://github.com/user-attachments/assets/bd782b0f-eb69-4b2a-b5c8-4379b2cda793)
+![image](https://github.com/user-attachments/assets/b325dc56-173a-4755-99b4-afb5ff861c9b)  
+![image](https://github.com/user-attachments/assets/e2df6a24-5bba-4761-b17b-2e534d7510d7)  
+![image](https://github.com/user-attachments/assets/aef22707-af4f-4766-9e02-aff532f94f6d)  
+![image](https://github.com/user-attachments/assets/2f562706-ad9b-4545-b1fe-fac9ab95bb27)  
+![image](https://github.com/user-attachments/assets/94708c18-86f7-41e9-bc54-274062b3d941)  
+![image](https://github.com/user-attachments/assets/afc0d981-575d-4315-aa11-f5c52c83a748)
 
 
